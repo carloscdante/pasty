@@ -26,6 +26,10 @@ json_clipboard = nf.read()
 print(json_clipboard)
 
 def process_values(value):
+    if value == "":
+        return
+    if value in text_saved:
+        return
     text_saved.append(value)
     print(text_saved)
     print(os.path.realpath(__file__))
